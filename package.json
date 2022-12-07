@@ -1,0 +1,21 @@
+{
+  "name": "module-14-repo",
+  "version": "1.0.0",
+  "description": "Tech Blog App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoelStafford/Module-14-Repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoelStafford/Module-14-Repo/issues"
+  },
+  "homepage": "https://github.com/NoelStafford/Module-14-Repo#readme"
+}
