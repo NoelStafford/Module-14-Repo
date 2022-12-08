@@ -1,0 +1,40 @@
+{{#each posts as |post| }}
+<div class="row mb-5 project">
+    <div class="col-md-6">
+        <h2>
+            <a href="/post/{{post.id}}">{{post.title}}</a>
+        </h2>
+        {{!-- will show who the username and the day it was made --}}
+        <span>Created by {{post.user.username}} on {{format_date post.date_created}}</span>
+    </div>
+    <div class="col-md-7">
+        <p> {{post.content}}</p>
+    {{!-- update and delete button for posts by id--}}
+    <a href="/dashboard/update/{{post.id}}"><button class="mt-2 mb-2 update">Update</button></a>
+        <button data-id="{{post.id}}" class="mt-2 mb-2 delete">Delete</button>
+    </div>
+</div>
+{{!-- grabbed from  --}}
+<div class="row mb-4 project mt-5">
+    <div class="col-md-5">
+        {{!-- area to add new post--}}
+        <h2>Add Post</h2>
+    </div>
+    <div class="col-md-7">
+        <form>
+            {{!-- can add the post title --}}
+            <label>Post Title</label>
+            <input type="text" id="post-title" class="w-100 custom-input-height" value="{{title}}" required>
+            {{!-- can add to the content of the post --}}
+            <label>Post Content</label>
+            <input type="text" id="post-body" class="w-100 custom-input-height" value="{{content}}" required>
+            {{!-- submit button to apply changes made to post  --}}
+            <button id="new-post-form" class="mt-2 mb-2">Submit</button>
+        </form>
+    </div>
+</div>
+{{!-- links to the new and delete js --}}
+<script src="/js/new.js"></script>
+{{#if posts}}
+<script src="/js/delete.js"></script>
+{{/if}}
