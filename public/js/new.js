@@ -18,4 +18,4 @@ const savePost = async (event) => {
         document.location.reload();
     }
 };
-document.querySelector('#new-post').addEventListener("click", savePost);
+document.querySelector('#save-post').addEventListener("click", savePost);
